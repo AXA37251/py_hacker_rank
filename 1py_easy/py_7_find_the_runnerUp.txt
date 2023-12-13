@@ -1,0 +1,27 @@
+# Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score. 
+# You are given n scores. Store them in a list and find the score of the runner-up.
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    
+# first = 0
+# second = 0
+# for score in arr:
+#     if(type(score) is int):
+#         if score > first:
+#             second = first
+#             first = score
+#         elif score > second and score < first:
+#             second = score
+# print(second)
+
+scores = []
+for a in arr:
+    if a in scores:
+        continue
+    else:
+        scores.append(a)
+
+ordered_scores = sorted(scores, reverse=True)
+print(ordered_scores[1])

@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    n = int(input())
+    integer_list = map(int, input().split())
+    
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# n = int(input())
+# integer_list = input()
+str_list = integer_list #.split(' ')
+int_list = []
+
+for iterator in str_list:
+    int_list.append(int(iterator))
+
+t = tuple(int_list)
+
+# print(t)
+
+print(hash(t))

@@ -1,0 +1,10 @@
+student_marks = {'alpha': [21, 30, 40]}
+
+print(student_marks['alpha'])
+
+def calc_average(mark):
+    auxArr = student_marks[mark]
+    mark_mean = sum(auxArr) / len(auxArr)
+    print("{:0.2f}".format(mark_mean))
+    
+calc_average('alpha')
